@@ -1,0 +1,173 @@
+CPS 109 
+Lab 4
+
+Ques 1:
+
+'''Write a program that uses a loop to computer the sum of all the even numbers from 2
+to 100 inclusive.'''
+
+x = 0
+
+for i in range(2,100+1):
+    if i%2 == 0:
+        x = x + i
+print (x)
+
+
+Ques 2:
+
+'''Write a program with a loop to compute the sum of all the squares from 1 to 100
+inclusive'''
+
+x = 0
+
+for i in range(1,100+1):
+    if i**2 <= 100:
+        x = i**2 + x
+print(x)
+
+
+Ques 3:
+
+'''Write a program with a loop to compute and print the powers of 2, for powers 0 to 20
+inclusive.'''
+
+x = 0
+
+for i in range(0,20+1):
+    print(2**i)
+
+
+Ques 4:
+
+'''Write a program with a loop to compute the sum of all the odd numbers from a to b
+inclusive, where a and b are inputs from the user.'''
+
+a = int(input("Enter the First Number: "))
+b = int(input("Enter the Second Number: "))
+
+x = 0
+
+for i in range(a,b+1):
+    if i%2 == 1:
+        x = x + i
+print (x)
+
+
+Ques 5:
+
+'''Write a program with a loop to compute the sum of all odd digits of an input. For
+example, if the input is 32677, the sum would be 3 + 7 + 7 = 17'''
+
+
+num = input('Enter a value: ')
+
+s = 0
+
+for digit in  num:
+    d = int(digit)
+    if d % 2 == 1:
+        s += d
+print('Sum of all odd digits of the entered value is', s)
+
+
+Ques 6:
+
+'''Ask the user to input 10 integers, and then the program prints the largest odd number
+that was entered. For example of the integers were: 10, 9, 7, 12, 2, 5, 15, 100, 90, 60,
+then the program would print 15 as the largest odd number. If there is no odd number,
+then the program should print a message saying so.’’'
+a = int(input('Enter your first integer: '))
+b = int(input('Enter your second integer: '))
+c = int(input('Enter your third integer: '))
+d = int(input('Enter your fourth integer: '))
+e = int(input('Enter your fifth integer: '))
+f = int(input('Enter your sixth integer: '))
+g = int(input('Enter your seventh integer: '))
+h = int(input('Enter your eighth integer: '))
+i = int(input('Enter your ninth integer: '))
+j = int(input('Enter your tenth integer: '))
+
+if a%2 ==0:
+    a = 0  
+else:
+    a = a 
+if b%2 ==0:
+    b = 0 
+else:
+    b = b
+if c%2 ==0:
+    c = 0
+else:
+    c = c 
+if d%2 ==0:
+    d = 0
+else:
+    d = d
+if e%2 ==0:
+    e = 0
+else:
+    e = e
+if f%2 ==0:
+    f = 0
+else:
+    f = f
+if g%2 ==0:
+    g = 0
+else:
+    g = g
+if h%2 ==0:
+    h = 0
+else:
+    h = h
+if i%2 ==0:
+    i = 0 
+else:
+    i = i 
+if j%2 ==0:
+    j = 0  
+else:
+    j = j
+
+value = [a, b, c, d, e, f, g, h, i, j]
+max = max(value)
+if max == 0:
+    print ('There are no odd numbers.')
+else: 
+    print (max, 'is the largest odd integer.’)
+
+
+Ques 7:
+
+'''Write a program which reads a string containing any characters from the user and prints
+the sum of the digits in the string. For example, if the string from the user is "I want 3
+oranges and 24 bananas, 1abc.", then the output would be 10, since 3 + 2 + 4 + 1 = 10.
+Note that a character is a digit if it is greater than or equal to '0' and less than or equal
+to '9'.'''
+
+
+strg = input('Enter a sentence containing words and numbers: ')
+
+sum = 0
+
+for char in strg:
+    if char.isdigit():
+        sum = sum + int(char)
+print(sum)
+
+
+Ques 8:
+
+'''Similar to Q7, from the text, read a string from the user which is a sequence of decimal
+numbers separated by commas, e.g., "1.23,2.4,3.123". Print the sum of the numbers,
+which for this example is the sum of 1.23 + 2.4 + 3.123 = 6.753'''
+
+
+strg = input('Enter a string: ')
+
+x = strg.split(',')
+
+sum = sum([float(num) for num in x])
+
+print(sum)
+    
